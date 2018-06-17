@@ -1,3 +1,4 @@
+import ColorPicker from './ColorPicker';
+import Panel from './Panel';
 
-module.exports = require('./ColorPicker');
-module.exports.Panel = require('./Panel');
+export { ColorPicker as default, Panel };
