@@ -38,22 +38,22 @@ build:
   only:
     - branches
 
-test:
-  services:
-    - postgres:latest
-  variables:
-    POSTGRES_DB: test
-  stage: test
-  image: gliderlabs/herokuish:latest
-  script:
-    - setup_test_db
-    - cp -R . /tmp/app
-    - /bin/herokuish buildpack test
-  only:
-    - branches
-  except:
-    variables:
-      - $TEST_DISABLED
+# test:
+#   services:
+#     - postgres:latest
+#   variables:
+#     POSTGRES_DB: test
+#   stage: test
+#   image: gliderlabs/herokuish:latest
+#   script:
+#     - setup_test_db
+#     - cp -R . /tmp/app
+#     - /bin/herokuish buildpack test
+#   only:
+#     - branches
+#   except:
+#     variables:
+#       - $TEST_DISABLED
 
 code_quality:
   stage: test
