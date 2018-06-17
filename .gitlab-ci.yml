@@ -107,7 +107,7 @@ dependency_scanning:
 
 publish:
   stage: deploy
-  image: npm:latest
+  image: node:latest
   script:
     - npm run build
     - echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}'>.npmrc
