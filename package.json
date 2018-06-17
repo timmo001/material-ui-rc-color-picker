@@ -46,26 +46,22 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "babel-core": "^6.21.0",
+    "babel-core": "^6.26.3",
     "estraverse": "^4.2.0",
-    "expect.js": "~0.3.1",
-    "lesshat": "~3.0.2",
-    "pre-commit": "1.x",
-    "rc-tools": "^5.10.1"
+    "expect.js": "^0.3.1",
+    "lesshat": "^4.1.0",
+    "pre-commit": "^1.2.2",
+    "rc-tools": "^8.1.1"
   },
   "dependencies": {
     "@material-ui/core": "^1.2.1",
-    "classnames": "^2.2.5",
-    "prop-types": "^15.5.8",
-    "rc-trigger": "1.x",
-    "rc-util": "^4.0.2",
+    "classnames": "^2.2.6",
+    "prop-types": "^15.6.1",
+    "rc-trigger": "^2.5.3",
+    "rc-util": "^4.5.1",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "tinycolor2": "^1.4.1"
-  },
-  "peerDependencies": {
-    "react": "16.x",
-    "react-dom": "16.x"
   },
   "pre-commit": [
     "lint"
