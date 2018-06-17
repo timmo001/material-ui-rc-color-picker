@@ -15,7 +15,7 @@ variables:
 stages:
   - build
   - test
-  - publish
+  - deploy
 
 # Generic DIND template
 .dind: &dind
@@ -105,21 +105,21 @@ dependency_scanning:
     variables:
       - $DEPENDENCY_SCANNING_DISABLED
 
-# publish:
-#   stage: publish
-#   image: npm:latest
-#   before_script:
-#   script:
-#     - |
-#       npm login
-#   tags:
-#     - publish
-#   only:
-#     - tags
-#     - triggers
-#     - schedules
-#   except:
-#     - /^(?!master).+@/
+publish:
+  stage: deploy
+  image: npm:latest
+  script:
+    - npm run build
+    - echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}'>.npmrc
+    - npm publish
+  tags:
+    - publish
+  only:
+    - tags
+    - triggers
+    - schedules
+  except:
+    - /^(?!master).+@/
 
 # ---------------------------------------------------------------------------
 

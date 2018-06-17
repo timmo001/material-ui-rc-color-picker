@@ -1,6 +1,6 @@
 {
   "name": "material-ui-rc-color-picker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React Color Picker using Material UI",
   "main": "./lib/index.js",
   "keywords": [
