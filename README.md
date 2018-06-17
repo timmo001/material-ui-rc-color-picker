@@ -9,11 +9,13 @@ Material UI React Color Picker (A fork of [rc-color-picker](https://github.com/r
 
 ## Screenshots
 
-
+![Icon Showing Panel](.github/icon.png)
+![Panel](.github/panel.png)
 
 ## Features
 
 * Supports color modes RGB, HSB and HSL
+* Uses the latest material-ui
 
 ## Installation
 
@@ -25,20 +27,41 @@ OR
 npm install material-ui-rc-color-picker
 ```
 
-## install
-
-[![material-ui-rc-color-picker](https://nodei.co/npm/material-ui-rc-color-picker.png)](https://npmjs.org/package/material-ui-rc-color-picker)
-
 ## Usage
+
+### As a button which toggles the panel in a dropdown
 
 ```js
 import ColorPicker from 'material-ui-rc-color-picker';
+import 'material-ui-rc-color-picker/assets/index.less';
 
+...
 
-
+<ColorPicker
+  className={classes.colorPicker}
+  enableAlpha={false}
+  color={this.state.color}
+  onChange={this.onChange}
+  mode="RGB" />
 ```
 
-## API
+### As a panel (No button to show. Shown directly on page)
+
+```js
+import { Panel as ColorPickerPanel } from 'material-ui-rc-color-picker';
+import 'material-ui-rc-color-picker/assets/index.css';
+
+...
+
+<ColorPickerPanel
+  className={classes.colorPicker}
+  enableAlpha={false}
+  color={this.state.color}
+  onChange={this.onChange}
+  mode="RGB" />
+```
+
+## Avaliable Props
 
 ### ColorPicker.props
 
