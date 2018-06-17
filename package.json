@@ -1,5 +1,5 @@
 {
-  "name": "material-ui-color-picker",
+  "name": "material-ui-rc-color-picker",
   "version": "1.0.0",
   "description": "React Color Picker using Material UI",
   "main": "./lib/index.js",
@@ -10,14 +10,14 @@
     "color-picker",
     "material-ui"
   ],
-  "homepage": "https://github.com/timmo001/material-ui-color-picker",
+  "homepage": "https://github.com/timmo001/material-ui-rc-color-picker",
   "author": "Timmo",
   "repository": {
     "type": "git",
-    "url": "git@github.com:timmo001/material-ui-color-picker.git"
+    "url": "git@github.com:timmo001/material-ui-rc-color-picker.git"
   },
   "bugs": {
-    "url": "https://github.com/timmo001/material-ui-color-picker/issues"
+    "url": "https://github.com/timmo001/material-ui-rc-color-picker/issues"
   },
   "files": [
     "lib/",
@@ -28,7 +28,7 @@
     "port": 8010
   },
   "entry": {
-    "material-ui-color-picker": [
+    "material-ui-rc-color-picker": [
       "./assets/index.less",
       "./src/index.js"
     ]

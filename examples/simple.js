@@ -1,7 +1,7 @@
-import 'material-ui-color-picker/assets/index.less';
+import 'material-ui-rc-color-picker/assets/index.less';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ColorPicker from 'material-ui-color-picker';
+import ColorPicker from 'material-ui-rc-color-picker';
 
 function changeHandler(colors) {
   console.log(colors);
@@ -26,7 +26,7 @@ ReactDOM.render(
       onClose={closeHandler}
       placement="topLeft"
       className="some-class">
-      <span className="material-ui-color-picker-trigger" />
+      <span className="material-ui-rc-color-picker-trigger" />
     </ColorPicker>
     <h4>topRight</h4>
     <ColorPicker color={'#F10'} onChange={changeHandler} placement="topRight" />

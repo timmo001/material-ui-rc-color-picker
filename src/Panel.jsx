@@ -196,6 +196,6 @@ Panel.defaultProps = {
   onChange: noop,
   onFocus: noop,
   onMount: noop,
-  prefixCls: 'material-ui-color-picker-panel',
+  prefixCls: 'material-ui-rc-color-picker-panel',
   style: {},
 };

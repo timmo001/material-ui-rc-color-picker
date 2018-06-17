@@ -1,10 +1,10 @@
 # Material UI Color Picker
 
-Material UI React Color Picker (A fork of [material-ui-color-picker](https://github.com/react-component/color-picker))
+Material UI React Color Picker (A fork of [rc-color-picker](https://github.com/react-component/color-picker))
 
-[![npm version](http://img.shields.io/npm/v/material-ui-color-picker.svg)](https://www.npmjs.org/package/material-ui-color-picker) 
-[![npm download](http://img.shields.io/npm/dm/material-ui-color-picker.svg)](https://www.npmjs.org/package/material-ui-color-picker)
-[![npm dependency](https://david-dm.org/timmo001/material-ui-color-picker.svg)](https://david-dm.org/timmo001/material-ui-color-picker)
+[![npm version](http://img.shields.io/npm/v/material-ui-rc-color-picker.svg)](https://www.npmjs.org/package/material-ui-rc-color-picker) 
+[![npm download](http://img.shields.io/npm/dm/material-ui-rc-color-picker.svg)](https://www.npmjs.org/package/material-ui-rc-color-picker)
+[![npm dependency](https://david-dm.org/timmo001/material-ui-rc-color-picker.svg)](https://david-dm.org/timmo001/material-ui-rc-color-picker)
 
 
 ## Screenshots
@@ -18,21 +18,21 @@ Material UI React Color Picker (A fork of [material-ui-color-picker](https://git
 ## Installation
 
 ```bash
-yarn add material-ui-color-picker
+yarn add material-ui-rc-color-picker
 
 OR
 
-npm install material-ui-color-picker
+npm install material-ui-rc-color-picker
 ```
 
 ## install
 
-[![material-ui-color-picker](https://nodei.co/npm/material-ui-color-picker.png)](https://npmjs.org/package/material-ui-color-picker)
+[![material-ui-rc-color-picker](https://nodei.co/npm/material-ui-rc-color-picker.png)](https://npmjs.org/package/material-ui-rc-color-picker)
 
 ## Usage
 
 ```js
-import ColorPicker from 'material-ui-color-picker';
+import ColorPicker from 'material-ui-rc-color-picker';
 
 
 

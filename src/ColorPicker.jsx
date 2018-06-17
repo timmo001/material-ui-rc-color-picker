@@ -241,10 +241,10 @@ ColorPicker.defaultProps = {
   onChange() {},
   onOpen() {},
   onClose() {},
-  children: <span className="material-ui-color-picker-trigger" />,
+  children: <span className="material-ui-rc-color-picker-trigger" />,
   className: '',
   enableAlpha: true,
   placement: 'topLeft',
-  prefixCls: 'material-ui-color-picker',
+  prefixCls: 'material-ui-rc-color-picker',
   style: {},
 };
