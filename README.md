@@ -15,7 +15,7 @@ Material UI React Color Picker (A fork of [rc-color-picker](https://github.com/r
 ## Features
 
 * Supports color modes RGB, HSB and HSL
-* Uses the latest material-ui
+* Uses the latest material-ui components
 
 ## Installation
 
