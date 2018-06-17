@@ -1,0 +1,24 @@
+.@{prefixClass}-panel-params {
+  font-size: 12px;
+  &-input {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+  }
+  input {
+    user-select: text;
+  }
+  &-hex {
+    width: 58px;
+  }
+  &-number, &-alpha {
+    margin-left: 8px !important;
+    width: 36px;
+  }
+
+  input[type=number] {
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+    }
+  }
+}

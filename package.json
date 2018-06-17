@@ -1,0 +1,73 @@
+{
+  "name": "material-ui-color-picker",
+  "version": "1.0.0",
+  "description": "React Color Picker using Material UI",
+  "main": "./lib/index.js",
+  "keywords": [
+    "react",
+    "reactjs",
+    "react-color-picker",
+    "color-picker",
+    "material-ui"
+  ],
+  "homepage": "https://github.com/timmo001/material-ui-color-picker",
+  "author": "Timmo",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:timmo001/material-ui-color-picker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/timmo001/material-ui-color-picker/issues"
+  },
+  "files": [
+    "lib/",
+    "assets/*.css",
+    "dist/"
+  ],
+  "config": {
+    "port": 8010
+  },
+  "entry": {
+    "material-ui-color-picker": [
+      "./assets/index.less",
+      "./src/index.js"
+    ]
+  },
+  "style": "./assets/index.css",
+  "scripts": {
+    "build": "rc-tools run build",
+    "start": "rc-tools run server",
+    "pub": "rc-tools run pub",
+    "lint": "rc-tools run lint",
+    "karma": "rc-tools run karma",
+    "saucelabs": "rc-tools run saucelabs",
+    "test": "rc-tools run test",
+    "coverage": "rc-tools run coverage"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.21.0",
+    "estraverse": "^4.2.0",
+    "expect.js": "~0.3.1",
+    "lesshat": "~3.0.2",
+    "pre-commit": "1.x",
+    "rc-tools": "^5.10.1"
+  },
+  "dependencies": {
+    "@material-ui/core": "^1.2.1",
+    "classnames": "^2.2.5",
+    "prop-types": "^15.5.8",
+    "rc-trigger": "1.x",
+    "rc-util": "^4.0.2",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "tinycolor2": "^1.4.1"
+  },
+  "peerDependencies": {
+    "react": "16.x",
+    "react-dom": "16.x"
+  },
+  "pre-commit": [
+    "lint"
+  ]
+}
