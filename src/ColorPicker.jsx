@@ -7,9 +7,6 @@ import placements from './placements';
 
 import Color from './helpers/color';
 
-function refFn(field, component) {
-  this[field] = component;
-}
 
 function prevent(e) {
   e.preventDefault();
@@ -29,29 +26,9 @@ export default class ColorPicker extends React.Component {
       open: false,
     };
 
-    const events = [
-      'onTriggerClick',
-      'onChange',
-      'onBlur',
-      'getPickerElement',
-      'getRootDOMNode',
-      'getTriggerDOMNode',
-      'onVisibleChange',
-      'onPanelMount',
-      'setOpen',
-      'open',
-      'close',
-      'focus',
-    ];
-
-    events.forEach(e => {
-      this[e] = this[e](this);
-    });
-
-    this.saveTriggerRef = refFn(this, 'triggerInstance');
   }
 
-  componentWillReceiveProps(nextProps) {
+  componentWillReceiveProps = (nextProps) => {
     if (nextProps.color) {
       this.setState({
         color: nextProps.color,
@@ -64,13 +41,13 @@ export default class ColorPicker extends React.Component {
     }
   }
 
-  onTriggerClick() {
+  onTriggerClick = () => {
     this.setState({
       open: !this.state.open,
     });
   }
 
-  onChange(colors) {
+  onChange = (colors) => {
     this.setState(
       {
         ...colors,
@@ -81,15 +58,15 @@ export default class ColorPicker extends React.Component {
     );
   }
 
-  onBlur() {
+  onBlur = () => {
     this.setOpen(false);
   }
 
-  onVisibleChange(open) {
+  onVisibleChange = (open) => {
     this.setOpen(open);
   }
 
-  onPanelMount(panelDOMRef) {
+  onPanelMount = (panelDOMRef) => {
     if (this.state.open) {
       setTimeout(() => {
         panelDOMRef.focus();
@@ -97,7 +74,7 @@ export default class ColorPicker extends React.Component {
     }
   }
 
-  setOpen(open, callback) {
+  setOpen = (open, callback) => {
     if (this.state.open !== open) {
       this.setState(
         {
@@ -116,7 +93,7 @@ export default class ColorPicker extends React.Component {
     }
   }
 
-  getRootDOMNode() {
+  getRootDOMNode = () => {
     return findDOMNode(this);
   }
 
@@ -125,7 +102,6 @@ export default class ColorPicker extends React.Component {
   }
 
   getPickerElement() {
-    // const state = this.state;
     return (
       <ColorPickerPanel
         onMount={this.onPanelMount}
@@ -208,8 +184,7 @@ export default class ColorPicker extends React.Component {
           popupTransitionName={transitionName}
           popupVisible={state.open}
           onPopupVisibleChange={this.onVisibleChange}
-          prefixCls={prefixCls}
-        >
+          prefixCls={prefixCls}>
           {children}
         </Trigger>
       </div>
@@ -238,9 +213,9 @@ ColorPicker.propTypes = {
 ColorPicker.defaultProps = {
   defaultColor: '#F00',
   defaultAlpha: 100,
-  onChange() {},
-  onOpen() {},
-  onClose() {},
+  onChange() { },
+  onOpen() { },
+  onClose() { },
   children: <span className="material-ui-rc-color-picker-trigger" />,
   className: '',
   enableAlpha: true,

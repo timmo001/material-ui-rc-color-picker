@@ -197,7 +197,7 @@ export default class Params extends React.Component {
               label={mode[0]}
               className={`${prefixCls}-number`}
               value={colorChannel[0]}
-              onChange={this.handleColorChannelChange(null, 0)}
+              onChange={this.handleColorChannelChange}
               InputProps={{
                 type: 'number',
               }} />
@@ -206,7 +206,7 @@ export default class Params extends React.Component {
               label={mode[1]}
               className={`${prefixCls}-number`}
               value={colorChannel[1]}
-              onChange={this.handleColorChannelChange(null, 1)}
+              onChange={this.handleColorChannelChange}
               InputProps={{
                 type: 'number',
               }} />
@@ -215,7 +215,7 @@ export default class Params extends React.Component {
               label={mode[2]}
               className={`${prefixCls}-number`}
               value={colorChannel[2]}
-              onChange={this.handleColorChannelChange(null, 2)}
+              onChange={this.handleColorChannelChange}
               InputProps={{
                 type: 'number',
               }} />
