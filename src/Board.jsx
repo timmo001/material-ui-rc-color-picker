@@ -9,9 +9,6 @@ const WIDTH = 200;
 const HEIGHT = 150;
 
 export default class Board extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   componentWillUnmount() {
     this.removeListeners();

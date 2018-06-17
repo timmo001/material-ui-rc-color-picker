@@ -8,9 +8,6 @@ function rgbaColor(r, g, b, a) {
 }
 
 export default class Alpha extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   componentWillUnmount() {
     this.removeListeners();
@@ -86,7 +83,7 @@ export default class Alpha extends React.Component {
     const prefixCls = this.getPrefixCls();
     return (
       <div className={prefixCls}>
-        <div ref="bg" className={`${prefixCls}-bg`} style={{ background: this.getBackground() }} />
+        <div className={`${prefixCls}-bg`} style={{ background: this.getBackground() }} />
         <span style={{ left: `${this.props.alpha}%` }} />
         <div className={`${prefixCls}-handler`} onMouseDown={this.onMouseDown} />
       </div>

@@ -4,9 +4,6 @@ import PropTypes from 'prop-types';
 import addEventListener from 'rc-util/lib/Dom/addEventListener';
 
 export default class Ribbon extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   componentWillUnmount() {
     this.removeListeners();
@@ -83,7 +80,7 @@ export default class Ribbon extends React.Component {
 
     return (
       <div className={prefixCls}>
-        <span ref="point" style={{ left: `${per}%` }} />
+        <span style={{ left: `${per}%` }} />
         <div className={`${prefixCls}-handler`} onMouseDown={this.onMouseDown} />
       </div>
     );

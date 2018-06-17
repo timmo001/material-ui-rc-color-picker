@@ -45,10 +45,10 @@ export default class ColorPicker extends React.Component {
     ];
 
     events.forEach(e => {
-      this[e] = this[e].bind(this);
+      this[e] = this[e](this);
     });
 
-    this.saveTriggerRef = refFn.bind(this, 'triggerInstance');
+    this.saveTriggerRef = refFn(this, 'triggerInstance');
   }
 
   componentWillReceiveProps(nextProps) {
@@ -222,7 +222,7 @@ ColorPicker.propTypes = {
   defaultAlpha: PropTypes.number,
   // can custom
   alpha: PropTypes.number,
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   className: PropTypes.string,
   color: PropTypes.string,
   enableAlpha: PropTypes.bool,
@@ -231,7 +231,7 @@ ColorPicker.propTypes = {
   onClose: PropTypes.func,
   onOpen: PropTypes.func,
   placement: PropTypes.oneOf(['topLeft', 'topRight', 'bottomLeft', 'bottomRight']),
-  prefixCls: PropTypes.string.isRequired,
+  prefixCls: PropTypes.string,
   style: PropTypes.object,
 };
 

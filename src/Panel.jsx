@@ -1,15 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import cx from 'classnames';
 import Color from './helpers/color';
-
 import Board from './Board';
 import Preview from './Preview';
 import Ribbon from './Ribbon';
 import Alpha from './Alpha';
 import Params from './Params';
-
-import cx from 'classnames';
+import typeColor from './utils/validationColor';
 
 function noop() { }
 
@@ -123,12 +121,14 @@ export default class Panel extends React.Component {
 
     return (
       <div
-        ref={(ref) => this.ref = ref}
+        ref={(ref) => {
+          this.ref = ref;
+          return ref;
+        }}
         className={[prefixCls, this.props.className].join(' ')}
         style={this.props.style}
         onFocus={this.onFocus}
-        onBlur={this.onBlur}
-        tabIndex="0">
+        onBlur={this.onBlur}>
         <div className={`${prefixCls}-inner`}>
           <Board rootPrefixCls={prefixCls} color={color} onChange={this.handleChange} />
           <div className={wrapClasses}>
@@ -167,8 +167,6 @@ export default class Panel extends React.Component {
     );
   }
 }
-
-import typeColor from './utils/validationColor';
 
 Panel.propTypes = {
   alpha: PropTypes.number,

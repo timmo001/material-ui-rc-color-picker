@@ -36,7 +36,7 @@ export default class Params extends React.Component {
     const mode = this.state.mode;
     const range = channelMap[mode][index];
     let result = parseInt(value, 10);
-    if (isNaN(result)) {
+    if (!result) {
       result = 0;
     }
     result = Math.max(range[0], result);
@@ -108,7 +108,7 @@ export default class Params extends React.Component {
   handleAlphaHandler = event => {
     let alpha = parseInt(event.target.value, 10);
 
-    if (isNaN(alpha)) {
+    if (!alpha) {
       alpha = 0;
     }
     alpha = Math.max(0, alpha);
@@ -129,14 +129,12 @@ export default class Params extends React.Component {
       } else if (channel === 'B') {
         color.brightness = parseInt(value, 10) / 100;
       }
-    } else {
-      if (channel === 'R') {
-        color.red = parseInt(value, 10);
-      } else if (channel === 'G') {
-        color.green = parseInt(value, 10);
-      } else if (channel === 'B') {
-        color.blue = parseInt(value, 10);
-      }
+    } else if (channel === 'R') {
+      color.red = parseInt(value, 10);
+    } else if (channel === 'G') {
+      color.green = parseInt(value, 10);
+    } else if (channel === 'B') {
+      color.blue = parseInt(value, 10);
     }
 
     return color;
@@ -199,7 +197,7 @@ export default class Params extends React.Component {
               label={mode[0]}
               className={`${prefixCls}-number`}
               value={colorChannel[0]}
-              onChange={this.handleColorChannelChange.bind(null, 0)}
+              onChange={this.handleColorChannelChange(null, 0)}
               InputProps={{
                 type: 'number',
               }} />
@@ -208,7 +206,7 @@ export default class Params extends React.Component {
               label={mode[1]}
               className={`${prefixCls}-number`}
               value={colorChannel[1]}
-              onChange={this.handleColorChannelChange.bind(null, 1)}
+              onChange={this.handleColorChannelChange(null, 1)}
               InputProps={{
                 type: 'number',
               }} />
@@ -217,7 +215,7 @@ export default class Params extends React.Component {
               label={mode[2]}
               className={`${prefixCls}-number`}
               value={colorChannel[2]}
-              onChange={this.handleColorChannelChange.bind(null, 2)}
+              onChange={this.handleColorChannelChange(null, 2)}
               InputProps={{
                 type: 'number',
               }} />

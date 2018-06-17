@@ -10,7 +10,7 @@ function changeHandler(colors) {
 ReactDOM.render(
   <div style={{ textAlign: 'center' }}>
     <ColorPicker
-      color={'#36c'}
+      color="#36c"
       onChange={changeHandler}>
       <span className="react-custom-trigger">choose color</span>
     </ColorPicker>
