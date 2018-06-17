@@ -13,11 +13,6 @@ function closeHandler(colors) {
 
 ReactDOM.render(
   <div style={{ margin: '20px 20px 20px', textAlign: 'center' }}>
-    <p>-</p>
-    <p>-</p>
-    <p>-</p>
-    <p>-</p>
-    <p>-</p>
     <h4>topLeft</h4>
     <ColorPicker
       color="#36c"
@@ -30,14 +25,6 @@ ReactDOM.render(
     </ColorPicker>
     <h4>topRight</h4>
     <ColorPicker color="#F10" onChange={changeHandler} placement="topRight" />
-    <p>-</p>
-    <p>-</p>
-    <p>-</p>
-    <p>-</p>
-    <p>-</p>
-    <p>-</p>
-    <p>-</p>
-    <p>-</p>
     <h4>bottomLeft</h4>
     <ColorPicker color="#0ad" alpha={50} onChange={changeHandler} placement="bottomLeft" />
     <h4>bottomRight</h4>
