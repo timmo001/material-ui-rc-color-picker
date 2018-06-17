@@ -140,7 +140,7 @@ export default class Params extends React.Component {
     return color;
   };
 
-  handleColorChannelChange = (index, event) => {
+  handleColorChannelChange = index => event => {
     const value = this.getChannelInRange(event.target.value, index);
     const { mode } = this.state;
     const channel = mode[index];
@@ -197,7 +197,7 @@ export default class Params extends React.Component {
               label={mode[0]}
               className={`${prefixCls}-number`}
               value={colorChannel[0]}
-              onChange={this.handleColorChannelChange}
+              onChange={this.handleColorChannelChange(0)}
               InputProps={{
                 type: 'number',
               }} />
@@ -206,7 +206,7 @@ export default class Params extends React.Component {
               label={mode[1]}
               className={`${prefixCls}-number`}
               value={colorChannel[1]}
-              onChange={this.handleColorChannelChange}
+              onChange={this.handleColorChannelChange(1)}
               InputProps={{
                 type: 'number',
               }} />
@@ -215,7 +215,7 @@ export default class Params extends React.Component {
               label={mode[2]}
               className={`${prefixCls}-number`}
               value={colorChannel[2]}
-              onChange={this.handleColorChannelChange}
+              onChange={this.handleColorChannelChange(2)}
               InputProps={{
                 type: 'number',
               }} />
