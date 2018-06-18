@@ -112,7 +112,8 @@ publish:
     - yarn install
     - yarn run build
     - echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}'>.npmrc
-    - npm publish
+    - yarn run pub
+    # - npm publish
   tags:
     - deploy
   only:
